@@ -108,7 +108,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let total = 1;
+  let argAsString = '';
+  for(let i = 0; i < testArray.length; i++){
+    total = multiply(testArray[i], total)[0];
+    argAsString += testArray[i].toString();
+    if (i !== testArray.length - 1 ){
+      argAsString += ',';
+    }
+  }
 
+  return [total, `The numbers ${argAsString} have a product of ${total}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
