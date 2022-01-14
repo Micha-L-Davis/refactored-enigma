@@ -146,7 +146,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  let total = 1;
+  let argAsString = '';
+  for(let i = 0; i < testDynamicArray.length; i++){
+    total = multiply(testDynamicArray[i], total)[0];
+    argAsString += testDynamicArray[i].toString();
+    if (i !== testDynamicArray.length - 1 ){
+      argAsString += ',';
+    }
+  }
 
+  return [total, `The numbers ${argAsString} have a product of ${total}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
