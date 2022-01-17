@@ -79,10 +79,10 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let total = 0;
   let inputAsString = '';
-  for(let i = 0; i < testArray.length; i++){
-    total = sum(testArray[i], total)[0];
-    inputAsString += testArray[i].toString();
-    if (i !== testArray.length - 1 ){
+  for(let i = 0; i < sumArr.length; i++){
+    total = sum(sumArr[i], total)[0];
+    inputAsString += sumArr[i].toString();
+    if (i !== sumArr.length - 1 ){
       inputAsString += ',';
     }
   }
@@ -110,10 +110,10 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) { //eslint-disable-line
   let total = 1;
   let argAsString = '';
-  for(let i = 0; i < testArray.length; i++){
-    total = multiply(testArray[i], total)[0];
-    argAsString += testArray[i].toString();
-    if (i !== testArray.length - 1 ){
+  for(let i = 0; i < multArr.length; i++){
+    total = multiply(multArr[i], total)[0];
+    argAsString += multArr[i].toString();
+    if (i !== multArr.length - 1 ){
       argAsString += ',';
     }
   }
@@ -148,10 +148,10 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let total = 1;
   let argAsString = '';
-  for(let i = 0; i < testDynamicArray.length; i++){
-    total = multiply(testDynamicArray[i], total)[0];
-    argAsString += testDynamicArray[i].toString();
-    if (i !== testDynamicArray.length - 1 ){
+  for(let i = 0; i < dynamicArray.length; i++){
+    total = multiply(dynamicArray[i], total)[0];
+    argAsString += dynamicArray[i].toString();
+    if (i !== dynamicArray.length - 1 ){
       argAsString += ',';
     }
   }
